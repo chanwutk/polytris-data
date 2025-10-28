@@ -4,7 +4,7 @@
 # Usage: ./download.sh <base_url>
 # Example: ./download.sh https://example.com/path/to/files
 
-DEFAULT_BASE_URL="https://github.com/chanwutk/polytris-data/blob/main/retinanet_b3d/"
+DEFAULT_BASE_URL="https://github.com/chanwutk/polytris-data/raw/refs/heads/main/retinanet_b3d/"
 
 if [ -z "$1" ]; then
     echo "No base URL provided, using default: $DEFAULT_BASE_URL"
