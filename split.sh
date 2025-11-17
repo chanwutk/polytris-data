@@ -15,4 +15,8 @@ if [ ! -f "$file" ]; then
   exit 3
 fi
 
-split -b 50M -- "$file" "${file}."
+split -a 2 -d -b 50M -- "$file" "${file}."
+
+# Calculate and save MD5 checksum
+md5sum "$file" | awk '{print $1}' > "${file}.md5"
+echo "MD5 checksum saved to ${file}.md5"
